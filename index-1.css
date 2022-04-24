@@ -1,0 +1,168 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  height: 200vh;
+}
+.inner-span {
+  display: block;
+  width: 200px;
+  height: 200px;
+  background-color: red;
+  /* animation-name: inner-span;
+    animation-duration: 4s;
+    transform: scale(2);
+     */
+}
+.inner-span:hover {
+  animation-name: inner-span;
+  animation-duration: 4s;
+  transform: scale(3);
+}
+@keyframes inner-span {
+  0% {
+    background-color: red;
+    left: 0px;
+    top: 0px;
+  }
+  25% {
+    background-color: yellow;
+    left: 200px;
+    top: 0px;
+  }
+  50% {
+    background-color: blue;
+    left: 200px;
+    top: 200px;
+  }
+  75% {
+    background-color: green;
+    left: 0px;
+    top: 200px;
+  }
+  100% {
+    background-color: red;
+    left: 0px;
+    top: 0px;
+  }
+}
+
+.train {
+  margin-top: 100px;
+  margin-left: 10px;
+  width: 500px;
+}
+.inner-span2 {
+  width: 70px;
+  height: 50px;
+  transition: 5s;
+  transition-timing-function: ease-out;
+}
+.train:hover .inner-span2 {
+  transform: translateX(430px);
+}
+.inner-span3 {
+  width: 30px;
+  height: 20px;
+  margin-top: 20px;
+  transform-origin: left top;
+  animation-name: plane;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+.inner-span3:hover {
+  transform-origin: left top;
+  animation-name: planeS;
+  animation-duration: 2s;
+  animation-timing-function: ease;
+  animation-fill-mode: forwards;
+}
+.inner-span3:not(:hover) {
+  transform-origin: left top;
+  animation-name: plane;
+  animation-duration: 2s;
+  animation-timing-function: ease;
+  animation-fill-mode: backwards;
+}
+@keyframes planeS {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(8);
+  }
+  100% {
+    transform: scale(7);
+  }
+}
+
+@keyframes plane {
+  0% {
+    transform: scale(7);
+  }
+  50% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+button {
+  padding: 10px;
+  background-color: greenyellow;
+}
+.buttonn:hover {
+  background-color: red;
+  color: white;
+}
+.inner-span4 {
+  width: 500px;
+  height: 100px;
+  background: red;
+
+  transition: transform 1s linear;
+  transform: translate(-90%);
+}
+
+.inner-span4:hover {
+  transform: translateX(0);
+}
+.inner-span5 {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  background-color: red;
+  animation-name: example;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+@keyframes example {
+  0% {
+    background-color: red;
+    left: 0px;
+    top: 0px;
+  }
+  25% {
+    background-color: yellow;
+    left: 200px;
+    top: 0px;
+  }
+  50% {
+    background-color: blue;
+    left: 200px;
+    top: 200px;
+  }
+  75% {
+    background-color: green;
+    left: 0px;
+    top: 200px;
+  }
+  100% {
+    background-color: red;
+    left: 0px;
+    top: 0px;
+  }
+}
